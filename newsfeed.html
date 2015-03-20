@@ -5,9 +5,13 @@
 </head>
 <body>
 
-    <h1>My links</h1>
+    <h1>My comments</h1>
     <div id="my-element" class="link-area">
     </div>
+
+    <script type="javascript/template" id="comment">
+      <a href='<%-path%>'><%-path%></a>
+    </script>
 
     <script src="backbone.marionette/underscore.js"></script>
     <script src="backbone.marionette/jquery.js"></script>
@@ -16,25 +20,40 @@
 
     <script>
 
-        var SingleLink = Backbone.Marionette.ItemView.extend({
+        var getTemplate = function(sel) {
+          return $(sel).text();
+        };
+
+        var CommentView = Backbone.Marionette.ItemView.extend({
           tagName: "li",
-          template: _.template("<a href='<%-path%>'><%-path%></a>")
+          template: _.template(getTemplate('#comment'))
         });
 
         var ListView = Backbone.Marionette.CollectionView.extend({
           tagName: 'ul',
-          childView: SingleLink
+          childView: CommentView
         });
-              
-        var list = new Backbone.Collection([
+
+        var Comment = Backbone.Model.extend({});
+
+        var CommentCollection = Backbone.Collection.extend({
+          model: Comment
+        });
+
+        // -----------------------
+
+        var data = [
           {path: 'http://google.com'},
           {path: 'http://mojotech.com'},
-        ]);
+        ];
 
-        (new ListView({
+        var list = new CommentCollection(data);
+
+        var listView = new ListView({
           collection: list,
           el: '.link-area'
-        })).render();
+        });
+        listView.render();
 
     </script>
 
