@@ -6,16 +6,24 @@
 <body>
 
     <h1>My comments</h1>
+
     <div id="my-element" class="link-area">
+
     </div>
 
-    <script type="javascript/template" id="comment">
-      <%-text%>
-    </script>
+<script type="javascript/template" id="comment">
+<%-text%>
+</script>
 
-    <script type="javascript/template" id="reply">
-      <h3><%-note%></h3>
-    </script>
+<script type="javascript/template" id="comment-list">
+<h2><%-title%></h2>
+<ul></ul>
+</script>
+
+
+<script type="javascript/template" id="reply">
+<h3><%-note%></h3>
+</script>
 
     <script src="backbone.marionette/underscore.js"></script>
     <script src="backbone.marionette/jquery.js"></script>
@@ -39,8 +47,17 @@
           template: _.template(getTemplate('#comment'))
         });
 
-        var CommentListView = Backbone.Marionette.CollectionView.extend({
-          tagName: 'ul',
+        // Wrapper tag: <ul> for the whole list not created at all
+
+        // var CommentListView = Backbone.Marionette.CollectionView.extend({
+        //   template: _.template(getTemplate('#comment-list')),
+        //   childViewContainer: 'ul',
+        //   childView: CommentView
+        // });
+
+        var CommentListView = Backbone.Marionette.CompositeView.extend({
+          template: _.template(getTemplate('#comment-list')),
+          childViewContainer: 'ul',
           childView: CommentView
         });
 
@@ -63,9 +80,11 @@
           {text: 'Of course'},
         ];
 
+        var title = new Backbone.Model({title: 'Hello there'});
         var list = new CommentCollection(data);
 
         var listView = new CommentListView({
+          model: title,
           collection: list,
           el: '.link-area'
         });
