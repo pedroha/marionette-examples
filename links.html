@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <h1>My links</h1>
+    <div id="my-element" class="link-area">
+    </div>
+
+    <script src="backbone.marionette/underscore.js"></script>
+    <script src="backbone.marionette/jquery.js"></script>
+    <script src="backbone.marionette/backbone.js"></script>
+    <script src="backbone.marionette/backbone.marionette.js"></script>
+
+    <script>
+
+        var SingleLink = Backbone.Marionette.ItemView.extend({
+          tagName: "li",
+          template: _.template("<a href='<%-path%>'><%-path%></a>")
+        });
+
+        var ListView = Backbone.Marionette.CollectionView.extend({
+          tagName: 'ul',
+          childView: SingleLink
+        });
+              
+        var list = new Backbone.Collection([
+          {path: 'http://google.com'},
+          {path: 'http://mojotech.com'},
+        ]);
+
+        (new ListView({
+          collection: list,
+          el: '.link-area'
+        })).render();
+
+    </script>
+
+</body>
+</html>

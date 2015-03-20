@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div id="my-element">
+      <p>Hello World</p>
+      <button class="my-button">Click Me</button>
+    </div>
+
+    <script src="backbone.marionette/underscore.js"></script>
+    <script src="backbone.marionette/jquery.js"></script>
+    <script src="backbone.marionette/backbone.js"></script>
+    <script src="backbone.marionette/backbone.marionette.js"></script>
+
+    <script>
+
+        var MyView = Marionette.ItemView.extend({
+          el: '#my-element',
+
+          template: false,
+
+          ui: {
+            paragraph: 'p',
+            button: '.my-button'
+          },
+
+          events: {
+            'click @ui.button': 'clickedButton'
+          },
+
+          clickedButton: function() {
+            var msg = 'I clicked the button! ' + this.ui.paragraph.text();
+            console.log(msg);
+            alert(msg);
+          }
+        });
+
+        var view = new MyView();
+        view.render();
+
+        var hello = view.ui.paragraph.text();        // returns 'Hello World'
+        view.ui.button.trigger('click'); // logs 'I clicked the button!'
+
+    </script>
+
+</body>
+</html>
