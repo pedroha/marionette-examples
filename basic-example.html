@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<script id="my-template" type="text/html">
+  I <%= percent %>% think that <%= showMessage() %>
+</script>
+
+    <div id="content"></div>
+
+    <script src="backbone.marionette/underscore.js"></script>
+    <script src="backbone.marionette/jquery.js"></script>
+    <script src="backbone.marionette/backbone.js"></script>
+    <script src="backbone.marionette/backbone.marionette.js"></script>
+
+    <script>
+
+    var MyView = Marionette.ItemView.extend({
+      template: "#my-template",
+
+      templateHelpers: function () {
+        return {
+          showMessage: function(){
+            return this.name + " is the coolest!";
+          },
+
+          percent: this.model.get('decimal') * 100
+        };
+      }
+    });
+
+    var model = new Backbone.Model({
+      name: "Marionette",
+      decimal: 1
+    });
+    var view = new MyView({
+      el: '#content',
+      model: model
+    });
+
+    view.render(); //=> "I 100% think that Marionette is the coolest!";
+
+    </script>
+
+</body>
+</html>
