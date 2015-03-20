@@ -10,7 +10,7 @@
     </div>
 
     <script type="javascript/template" id="comment">
-      <a href='<%-path%>'><%-path%></a>
+      <%-text%>
     </script>
 
     <script type="javascript/template" id="reply">
@@ -59,8 +59,8 @@
         // -----------------------
 
         var data = [
-          {path: 'http://google.com'},
-          {path: 'http://mojotech.com'},
+          {text: 'My house'},
+          {text: 'Of course'},
         ];
 
         var list = new CommentCollection(data);
