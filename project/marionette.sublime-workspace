@@ -1,0 +1,766 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"current",
+				"currentTarget"
+			],
+			[
+				"fa",
+				"favorite"
+			],
+			[
+				"create",
+				"createWebSocket"
+			],
+			[
+				"restar",
+				"restartSocket"
+			],
+			[
+				"close",
+				"closeRequest"
+			],
+			[
+				"bea",
+				"beatCount"
+			],
+			[
+				"stop",
+				"stoppingSocket"
+			],
+			[
+				"stp",
+				"stoppingSocket"
+			],
+			[
+				"heart",
+				"heartBeatTimer"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"newsfee",
+				"newsfeedLink"
+			],
+			[
+				"login",
+				"loginResponse"
+			],
+			[
+				"fou",
+				"foundationDone"
+			],
+			[
+				"get",
+				"getNeighborhood"
+			],
+			[
+				"Ne",
+				"NeighborhoodListing"
+			],
+			[
+				"vendo",
+				"vendorDir"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"ini",
+				"inherit"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"block",
+				"inline-block"
+			],
+			[
+				"inli",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/pha/dev/tmp/marionette/links.html",
+			"settings":
+			{
+				"buffer_size": 1001,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pretti",
+				"HTMLPrettify"
+			],
+			[
+				"prettify",
+				"HTMLPrettify"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/pha/dev/tmp/marionette"
+	],
+	"file_history":
+	[
+		"/Users/pha/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/package.json",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/lodash/lang/isNative.js",
+		"/Users/pha/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/bower_components/typeahead/src/typeahead/html.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/bower/node_modules/inquirer/node_modules/cli-color/node_modules/es5-ext/string/#/hyphen-to-camel.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/bower_components/hammerjs/hammer.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/bower/lib/commands/install.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/__init__.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/Gruntfile.js",
+		"/Users/pha/dev/PROJECTS/reactor/tests/client/nsq/items/newsfeed.json",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/itemfeed/sponsored-ad.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/templates/comments/comments-view.hbs",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/app.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/comments/view.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/templates/app/app.html",
+		"/Users/pha/dev/PROJECTS/reactor/tests/client/nsq/items/lodash.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/topnav/view.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app/item/comment.scss",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/item/view.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app/item/comment-tablet.scss",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/realtime/controller.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/safety_pig.txt",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/sanitize.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/application.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/bower_components/modernizr/feature-detects/a-download.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/lodash/utility/times.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/browserify/test/ignore/by-relative.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/browserify/node_modules/events/tests/remove-all-listeners.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/bower_components/backbone/README.md",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/requirements.txt",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/lodash/internal/shimIsPlainObject.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app/item/article.scss",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/itemfeed/collection.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/templates/item/item-view.hbs",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/handler/web/async/item.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/itemfeed/collection-view.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app/itemfeed/itemfeed.scss",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/templates/newsfeed/itemfeed.hbs",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/templates/app/itemfeed.html",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/templates/notification/single-item-view.hbs",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/lodash/lang/isTypedArray.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/templates/app/index.html",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/services/item.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/browserify/node_modules/duplexer2/test/tests.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/cron/tasks/test.py",
+		"/Users/pha/dev/PROJECTS/reactor/tests/integration/test_spamcheck.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/browserify/test/tr_error.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/TODO",
+		"/Users/pha/dev/PROJECTS/reactor/tests/integration/service/twitter.py",
+		"/Users/pha/dev/PROJECTS/reactor/tests/integration/service/img.py",
+		"/Users/pha/dev/PROJECTS/reactor/tests/integration/service/__init__.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/services/email.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/sinon/lib/sinon/util/fake_server_with_clock.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/templates/neighborhoods/search-view.hbs",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/server.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/browserify/test/standalone_events.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/del/node_modules/each-async/node_modules/set-immediate-shim/readme.md",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/handler/web/async/invite.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/handler/web/async/user.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/browserify/node_modules/resolve/example/async.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/lodash/internal/arraySome.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/handler/web/async/twitter.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/handler/web/async/spamcheck.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/handler/web/async/nbhd.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/handler/web/async/comment.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/handler/web/async/base.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/handler/web/async/__init__.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/fte/itemfeed-view.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/classes/item-view.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/templates/fte/itemfeed-view.hbs",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/js/classes/item-view.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/bower_components/backbone.marionette/api/item-view.jsdoc",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/bower_components/backbone.marionette/src/marionette.itemview.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/dao/item.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/gulpfile.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app/item/item.scss",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app/app.scss",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/chai/lib/chai/utils/addProperty.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app/item/article-tablet.scss",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/itemfeed/controller.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/bower.json",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/item/compose-view.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/dao/invite.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/bower_components/typeahead/test/fixtures/ajax_responses.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules/nsq/item/controller.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/browserify/node_modules/insert-module-globals/node_modules/combine-source-map/node_modules/source-map/test/source-map/test-source-map-consumer.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/static/ui/css/newsfeed-item.css",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/lodash/internal/baseForOwnRight.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/lodash/internal/baseForOwn.js",
+		"/Users/pha/dev/tmp/socketio/node_modules/socket.io/lib/client.js",
+		"/Users/pha/dev/tmp/socketio/node_modules/socket.io/lib/namespace.js",
+		"/Users/pha/dev/tmp/socketio/node_modules/socket.io/lib/socket.js",
+		"/Users/pha/dev/tmp/socketio/node_modules/socket.io/package.json",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/model.py",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/node_modules/bower/node_modules/graceful-fs/test/max-open.js",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app/item/sponsored-ad.scss",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app/item/article-content.scss",
+		"/Users/pha/dev/PROJECTS/reactor/reactor/settings/base.py",
+		"/Users/pha/dev/tmp/marionette-meeting-booker/public/javascripts/modules/meetings/list/list_controller.js",
+		"/Users/pha/dev/tmp/marionette-meeting-booker/public/javascripts/modules/meetings/list/list_view.js",
+		"/Users/pha/dev/tmp/marionette-meeting-booker/public/javascripts/modules/meetings/edit/edit_controller.js",
+		"/Users/pha/dev/tmp/build-js/test-bower/gulpfile.js",
+		"/Users/pha/dev/PROJECTS/reactor-ui/gulpfile.js",
+		"/Users/pha/dev/PROJECTS/reactor-ui/client/assets/js/nsq/node_modules/nsq/user.js",
+		"/Users/pha/dev/PROJECTS/reactor-ui/templates/app/_head.html",
+		"/Users/pha/dev/PROJECTS/reactor-ui/templates/app/_footer.html",
+		"/Users/pha/dev/PROJECTS/reactor-ui/bower.json",
+		"/Users/pha/dev/PROJECTS/reactor-ui/templates/app/test.html",
+		"/Users/pha/dev/PROJECTS/reactor-ui/client/assets/js/nsq/node_modules/nsq/utilities.js",
+		"/Users/pha/dev/tmp/build-js/test-bower/node_modules/.bin/gulp",
+		"/Users/pha/dev/PROJECTS/reactor-ui/dao/favorite.py",
+		"/Users/pha/dev/tmp/build-js/test-bower/bower_components/modernizr/feature-detects/fullscreen-api.js",
+		"/Users/pha/dev/PROJECTS/reactor-ui/client/assets/templates/listing-nbhd.hbs",
+		"/Users/pha/dev/tmp/front-end/backbone-route/index.html",
+		"/Users/pha/dev/tmp/front-end/backbone-route/routes.html",
+		"/Users/pha/Downloads/raven.min.map",
+		"/Users/pha/dev/PROJECTS/reactor-ui/README.md",
+		"/Users/pha/dev/PROJECTS/reactor-ui/client/assets/sass/nsq/nsq.scss",
+		"/Users/pha/dev/PROJECTS/reactor-ui/client/assets/js/nsq/node_modules/nsq/login.js",
+		"/Users/pha/dev/PROJECTS/reactor-ui/client/assets/templates/itemfeed.hbs",
+		"/Users/pha/dev/PROJECTS/reactor-ui/client/assets/js/nsq/node_modules/nsq/neighborhood-listing.js",
+		"/Users/pha/dev/PROJECTS/reactor-ui/templates/app/index.html",
+		"/Users/pha/dev/PROJECTS/reactor-ui/static/css/nsq.css",
+		"/Users/pha/dev/PROJECTS/reactor-ui/dao/nbhd.py",
+		"/Users/pha/dev/PROJECTS/reactor-ui/urls.py",
+		"/Users/pha/dev/tmp/foundation-test/foundation-5.4.6/js/foundation/foundation.dropdown.js",
+		"/Users/pha/dev/tmp/foundation-test/foundation-5.4.6/foundation-drops.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq/node_modules",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/templates",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app",
+			"/Users/pha/dev/PROJECTS/reactor/reactor",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/sass/app",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets",
+			"/Users/pha/dev/PROJECTS/reactor/reactor/client/assets/js/nsq",
+			"/Users/pha/dev/PROJECTS/reactor-ui/client/assets/js",
+			"/Users/pha/dev/PROJECTS/reactor-ui/client/assets/js/nsq/node_modules",
+			"/Users/pha/dev/PROJECTS/reactor/client/assets",
+			"/Users/pha/dev/nodejs/nvm/v0.10.32/lib/node_modules/bower",
+			"/Users/pha/dev/tmp/build-js/test-bower/node_modules/bower",
+			"/Users/pha/dev/PROJECTS/reactor",
+			"/Users/pha/dev/PROJECTS/reactor/client/assets",
+			"/Users/pha/dev/PROJECTS/reactor",
+			"/Users/pha/dev/PROJECTS/reactor/static",
+			"/Users/pha/dev/PROJECTS/reactor"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sublime",
+			"recent",
+			"session",
+			"\nHello",
+			"auto",
+			"find('textarea')",
+			"MenuSlider",
+			"Cookie",
+			"ajs_",
+			"currentTarget",
+			"favoriteAction",
+			"heartBeatTimer",
+			"setHeartBeat",
+			"stoppingSocket",
+			"setHeartBeat",
+			"RealTime",
+			"heartBeatTimer",
+			"createWebSocket",
+			"DOMAIN",
+			"URLROOT",
+			"BASEURL",
+			"http",
+			"TEST_ID",
+			"TEST_MERCHANT",
+			"TEST_ADS",
+			"_get_by_id",
+			"Item",
+			"a/items",
+			"insertAdItem",
+			"TIMER_PERIOD",
+			"getWebSocketUrl",
+			"heartBeatTimer",
+			"socket",
+			"realtime",
+			"viewlen",
+			"checkScrollTrigger",
+			"ItemFeedChannel:deleteItem",
+			"confirmDelete",
+			"SASS_CSS_DIR",
+			"border",
+			"ext-link",
+			"DEFAULT_AD_POSITION",
+			"TEST_ADS",
+			"JSON",
+			"autosize",
+			"commentView",
+			"commentView(",
+			"commentView",
+			"renderCommentsRepliesDisplay",
+			"commentViewTemplate",
+			"WebSocket",
+			"hello",
+			"background-position",
+			"TEST_ADS",
+			"is_merchant",
+			"merchant",
+			"sponso",
+			"content",
+			"link",
+			"button.link",
+			"link",
+			"FACEBOOK",
+			"TWITTER_HANDLE",
+			"exported",
+			"3000",
+			"browser",
+			"logger",
+			"morgan",
+			"model",
+			"\ndescribe('Marionette', function(){\n  describe('#indexOf()', function(){\n    it('should return -1 when the value is not present', function(){\n      expect([1,2,3].indexOf(5)).to.be(-1);\n      expect([1,2,3].indexOf(0)).to.be(-1);\n    });\n  });\n});\n\n",
+			"navig",
+			"goto",
+			"\" +",
+			"\"",
+			"\\",
+			"\\n",
+			"Analytics",
+			"isLoggedInUser",
+			"setNeighborhood",
+			"getPlaceInfo",
+			"addClickListener",
+			"displayNeighborhoods",
+			"addClickListener",
+			"navigate",
+			"newsfeed",
+			"^",
+			"\n                     ",
+			"analy",
+			"factory",
+			"setupLo",
+			"router",
+			"exports",
+			"skipBo",
+			"skipB",
+			"nsq",
+			"addClickListener",
+			"_updateDropdown",
+			"displayNeighborhoods",
+			"addClickListener",
+			"            User.setNeighborhood(nbhd);\ndisplayNeighborhoods",
+			"displayNeighborhoods",
+			"alert",
+			"displayNewsfeed",
+			"newsfeed",
+			"setNeighborhood",
+			"setNei",
+			"setNeight",
+			"landing",
+			"addClickListener",
+			"navigate",
+			"addClic",
+			"_updateDropdown",
+			"setupDropDown",
+			"newsfeed",
+			"route",
+			"updateDOM",
+			"displayNeighborhoodListing",
+			"bower",
+			"addClickListener",
+			"data(",
+			"data('dropdown')",
+			"addClickListener",
+			"displayLogin",
+			"nsqLogin",
+			"createModal",
+			"nsqLogin",
+			"createModal",
+			"closeModal"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"`",
+			"    ",
+			"cssApp",
+			"cssVendor",
+			"row2",
+			"row3",
+			"row4",
+			"row3",
+			"row2",
+			"row1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/pha/dev/tmp/marionette/links.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1001,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								143
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "marionette.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"reactor/__init__.py"
+			],
+			[
+				"gulp",
+				"reactor/gulpfile.js"
+			],
+			[
+				"sponsore",
+				"reactor/client/assets/js/nsq/node_modules/nsq/itemfeed/sponsored-ad.js"
+			],
+			[
+				"sponsored",
+				"reactor/client/assets/js/nsq/node_modules/nsq/itemfeed/sponsored-ad.js"
+			],
+			[
+				"realtime/",
+				"reactor/client/assets/js/nsq/node_modules/nsq/realtime/controller.js"
+			],
+			[
+				"spons",
+				"reactor/client/assets/js/nsq/node_modules/nsq/itemfeed/sponsored-ad.js"
+			],
+			[
+				"itemfeed/collect",
+				"reactor/client/assets/js/nsq/node_modules/nsq/itemfeed/collection-view.js"
+			],
+			[
+				"service/item",
+				"reactor/services/item.py"
+			],
+			[
+				"async/item",
+				"reactor/handler/web/async/item.py"
+			],
+			[
+				"async/",
+				"reactor/handler/web/async/user.py"
+			],
+			[
+				"itemview",
+				"reactor/client/assets/templates/notification/single-item-view.hbs"
+			],
+			[
+				"app.scss",
+				"client/assets/sass/app/app.scss"
+			],
+			[
+				"itemviewhbs",
+				"client/assets/templates/item/item-view.hbs"
+			],
+			[
+				"article.scss",
+				"client/assets/sass/app/item/article.scss"
+			],
+			[
+				"sponso",
+				"client/assets/js/nsq/node_modules/nsq/itemfeed/sponsored-ad.js"
+			],
+			[
+				"itemfeedcontr",
+				"client/assets/js/nsq/node_modules/nsq/itemfeed/controller.js"
+			],
+			[
+				"itemfeedcontrol",
+				"client/assets/js/nsq/node_modules/nsq/itemfeed/controller.js"
+			],
+			[
+				"itemcontro",
+				"client/assets/js/nsq/node_modules/nsq/item/controller.js"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"gulpfile",
+				"gulpfile.js"
+			],
+			[
+				"model.py",
+				"model.py"
+			],
+			[
+				"readme",
+				"reactor-ui/README.md"
+			],
+			[
+				"nsq.scss",
+				"reactor-ui/client/assets/sass/nsq/nsq.scss"
+			],
+			[
+				"user",
+				"reactor-ui/client/assets/js/nsq/node_modules/nsq/user.js"
+			],
+			[
+				"index.html",
+				"reactor-ui/templates/index.html"
+			],
+			[
+				"index.",
+				"reactor/templates/app/index.html"
+			],
+			[
+				"itemfeed",
+				"reactor/client/assets/js/nsq/node_modules/nsq/itemfeed.js"
+			],
+			[
+				"bower.",
+				"reactor/bower.json"
+			],
+			[
+				"requirements",
+				"reactor/requirements.txt"
+			],
+			[
+				"urls.p",
+				"reactor/urls.py"
+			],
+			[
+				"utilit",
+				"reactor/client/assets/js/nsq/node_modules/nsq/utilities.js"
+			],
+			[
+				"package",
+				"reactor/package.json"
+			],
+			[
+				"grunt",
+				"PROJECTS/reactor/Gruntfile.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/dev/PROJECTS/nsq-project/nsq.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 329.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
