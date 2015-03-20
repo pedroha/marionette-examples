@@ -13,6 +13,10 @@
       <a href='<%-path%>'><%-path%></a>
     </script>
 
+    <script type="javascript/template" id="reply">
+      <h3><%-note%></h3>
+    </script>
+
     <script src="backbone.marionette/underscore.js"></script>
     <script src="backbone.marionette/jquery.js"></script>
     <script src="backbone.marionette/backbone.js"></script>
@@ -24,20 +28,30 @@
           return $(sel).text();
         };
 
+        var ReplyView = Backbone.Marionette.ItemView.extend({
+          tagName: "li",
+          template: _.template(getTemplate('#reply'))
+        });
+
         var CommentView = Backbone.Marionette.ItemView.extend({
           tagName: "li",
           template: _.template(getTemplate('#comment'))
         });
 
-        var ListView = Backbone.Marionette.CollectionView.extend({
+        var CommentListView = Backbone.Marionette.CollectionView.extend({
           tagName: 'ul',
           childView: CommentView
         });
 
+        var Reply = Backbone.Model.extend({});
         var Comment = Backbone.Model.extend({});
 
         var CommentCollection = Backbone.Collection.extend({
           model: Comment
+        });
+
+        var ReplyCollection = Backbone.Collection.extend({
+          model: Reply
         });
 
         // -----------------------
@@ -49,7 +63,7 @@
 
         var list = new CommentCollection(data);
 
-        var listView = new ListView({
+        var listView = new CommentListView({
           collection: list,
           el: '.link-area'
         });
