@@ -28,9 +28,10 @@
           return $(sel).text();
         };
 
-        var ReplyView = Backbone.Marionette.ItemView.extend({
-          tagName: "li",
-          template: _.template(getTemplate('#reply'))
+        var Comment = Backbone.Model.extend({});
+
+        var CommentCollection = Backbone.Collection.extend({
+          model: Comment
         });
 
         var CommentView = Backbone.Marionette.ItemView.extend({
@@ -43,16 +44,17 @@
           childView: CommentView
         });
 
-        var Reply = Backbone.Model.extend({});
-        var Comment = Backbone.Model.extend({});
+        // var Reply = Backbone.Model.extend({});
 
-        var CommentCollection = Backbone.Collection.extend({
-          model: Comment
-        });
+        // var ReplyCollection = Backbone.Collection.extend({
+        //   model: Reply
+        // });
 
-        var ReplyCollection = Backbone.Collection.extend({
-          model: Reply
-        });
+        // var ReplyView = Backbone.Marionette.ItemView.extend({
+        //   tagName: "li",
+        //   template: _.template(getTemplate('#reply'))
+        // });
+
 
         // -----------------------
 
