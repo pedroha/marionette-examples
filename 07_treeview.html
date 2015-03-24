@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- Trying to run, but it's too obsolete!
+http://lostechies.com/derickbailey/2012/04/05/composite-views-tree-structures-tables-and-more/
+ -->
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+
+      body{
+          padding-left: 10px;
+      }
+
+      ul {
+        list-style: disc;
+        padding-left: 10px;
+        margin-left: 10px;    
+      }
+
+    </style>
+</head>
+<body>
+
+    <script id="node-template" type="text/template">
+        <%= nodeName %>
+        <ul></ul>
+    </script>
+            
+    <div id="tree">
+    </div>
+
+    <script src="backbone.marionette/underscore.js"></script>
+    <script src="backbone.marionette/jquery.js"></script>
+    <script src="backbone.marionette/backbone.js"></script>
+    <script src="backbone.marionette/backbone.marionette.js"></script>
+
+    <script>
+
+
+var NodeView = Marionette.ItemView.extend({
+    template: "#node-template"    
+})
+
+// The recursive tree view
+var TreeView = Marionette.CompositeView.extend({
+    tagName: "li",
+
+    childView: NodeView,
+    
+    initialize: function(){
+        // grab the child collection from the parent model
+        // so that we can render the collection as children
+        // of this parent node
+        this.collection = this.model.nodes;
+    },
+    
+    appendHtml: function(cv, iv){
+        cv.$("ul:first").append(iv.el);
+    }    
+});
+
+// // The tree's root: a simple collection view that renders 
+// // a recursive tree structure for each item in the collection
+// var TreeRoot = Backbone.Marionette.CollectionView.extend({
+//     tagName: "ul",
+//     itemView: TreeView
+// });
+
+var TreeNode = Backbone.Model.extend({
+    initialize: function(){
+        var nodes = this.get("nodes");
+        if (nodes){
+            this.nodes = new TreeNodeCollection(nodes);
+            this.unset("nodes");
+        }
+    }        
+});
+
+var TreeNodeCollection = Backbone.Collection.extend({
+    model: TreeNode
+});
+
+// ----------------------------------------------------------------
+// Below this line is normal stuff... models, templates, data, etc.
+// ----------------------------------------------------------------
+var treeData = [
+  {
+    nodeName: "top level 1",
+    nodes: [
+      {
+        nodeName: "2nd level, item 1",
+        nodes: [
+          { nodeName: "3rd level, item 1" },
+          { nodeName: "3rd level, item 2" },
+          { nodeName: "3rd level, item 3" }
+        ]
+      },
+      {
+        nodeName: "2nd level, item 2",
+        nodes: [
+          { nodeName: "3rd level, item 4" },
+          { 
+              nodeName: "3rd level, item 5",
+              nodes: [
+                  { nodeName: "4th level, item 1" },
+                  { nodeName: "4th level, item 2" },
+                  { nodeName: "4th level, item 3" }
+              ]
+          },
+          { nodeName: "3rd level, item 6" }
+        ]
+      }
+    ]
+  },
+  {
+    nodeName: "top level 2",
+    nodes: [
+      {
+        nodeName: "2nd level, item 3",
+        nodes: [
+          { nodeName: "3rd level, item 7" },
+          { nodeName: "3rd level, item 8" },
+          { nodeName: "3rd level, item 9" }
+        ]
+      },
+      {
+        nodeName: "2nd level, item 4",
+        nodes: [
+          { nodeName: "3rd level, item 10" },
+          { nodeName: "3rd level, item 11" },
+          { nodeName: "3rd level, item 12" }
+        ]
+      }
+    ]
+  }
+];
+
+var tree = new TreeNodeCollection(treeData);
+
+console.log(tree);
+
+// var treeView = new TreeRoot({
+//     collection: tree
+// });
+
+
+// treeView.render();
+// $("#tree").html(treeView.el);
+
+    </script>
+
+</body>
+</html>
