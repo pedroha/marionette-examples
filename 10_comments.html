@@ -17,6 +17,10 @@
         <%= content %>
     </script>
 
+    <script id="comment-leaf-template" type="text/template">
+        Leaf: <%= content %>
+    </script>
+
     <script id="article-template" type="text/template">
       <h1> Super Article </h1>
       <div id="article-content"></div>
@@ -79,11 +83,21 @@
   var CommentView = Marionette.CompositeView.extend({
     template: '#comment-template',
 
-    tagName: 'ul',
+    tagName: function() {
+      if (this.model.comments) {
+        return 'ul';
+      }
+      else {
+        return 'li';
+      }
+    },
 
     initialize: function() {
       // alert("CommentView init()");
       this.collection = this.model.comments;
+      // if (!this.collection) {
+      //   alert("leaf");
+      // }
     }
    // , attachHtml: function(collectionView, childView, index) {
    //   collectionView._insertAfter(childView); 
