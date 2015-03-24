@@ -58,6 +58,19 @@
       { content: 'Level B.2'},
       { content: 'Level B.3'}
     ]
+  }, {
+    content: 'Level C',
+    comments: [
+      { content: 'Level C.1'},
+      { content: 'Level C.2'},
+      { content: 'Level C.3',
+        comments: [
+          {content: 'Level C.3 A'},
+          {content: 'Level C.3 B'},
+          {content: 'Level C.3 C'}
+        ]
+      }
+    ]
   }];
 
   var comments = new CommentCollection(commentTree);
