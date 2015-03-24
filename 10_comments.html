@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Composite Views</title>
+</head>
+<body>
+
+    My Content
+    <div id="content"></div>
+
+    <script src="backbone.marionette/underscore.js"></script>
+    <script src="backbone.marionette/jquery.js"></script>
+    <script src="backbone.marionette/backbone.js"></script>
+    <script src="backbone.marionette/backbone.marionette.js"></script>
+
+<script>
+
+  var Comment = Backbone.Model.extend({
+    initialize: function() {
+      var comments = this.get("comments");
+      if (comments) {
+        this.comments = new CommentCollection(comments);
+        this.unset("comments"); // TODO: why is this necessary?
+      }
+    }
+  });
+
+  var CommentCollection = Backbone.Collection.extend({
+    model: Comment
+  });
+
+  var commentTree = [{
+    text: 'Level A',
+    comments: [
+      { text: 'Level A.1'},
+      { text: 'Level A.2'},
+      { text: 'Level A.3'}
+    ]    
+  }, {
+    text: 'Level B',
+    comments: [
+      { text: 'Level B.1'},
+      { text: 'Level B.2'},
+      { text: 'Level B.3'}
+    ]
+  }];
+
+  var comments = new CommentCollection(commentTree);
+
+  console.log(comments);
+
+
+</script>
+
+</body>
+</html>
