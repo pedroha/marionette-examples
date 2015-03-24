@@ -57,8 +57,7 @@
   }];
 
   var comments = new CommentCollection(commentTree);
-  console.log(comments);
-
+  // console.log(comments);
 
   var CommentView = Marionette.CompositeView.extend({
     template: '#comment-template',
@@ -66,8 +65,9 @@
     tagName: 'ul',
 
     initialize: function() {
-      console.log("CommentView", this);
-      // this.collection = this.model.comments;
+      alert("CommentView init()");
+      // console.log("CommentView", this);
+      // this.comments = this.models.comments;
     }
 
    // , attachHtml: function(collectionView, childView, index) {
@@ -75,14 +75,25 @@
    //  }
   });
 
-  var commentViews = new CommentView({
+  // var commentViews = new CommentView({
+  //   el: '#content',
+  //   collection: comments
+  // });
+
+  // commentViews.render();
+  // $('#content').append(comments.$el);
+
+  var ArticleView = Marionette.CollectionView.extend({
+    childView: CommentView
+  });
+
+  var article = new ArticleView({
     el: '#content',
     collection: comments
   });
 
-  commentViews.render();
+  article.render();
 
-  // $('#content').append(comments.$el);
 
 
 </script>
