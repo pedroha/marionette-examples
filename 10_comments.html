@@ -13,14 +13,25 @@
     <script src="backbone.marionette/backbone.js"></script>
     <script src="backbone.marionette/backbone.marionette.js"></script>
 
+    <script id="comment-template" type="text/template">
+        <%= content %>
+        <ul></ul>
+    </script>
+
 <script>
 
   var Comment = Backbone.Model.extend({
     initialize: function() {
       var comments = this.get("comments");
+      // alert('Comments ' + comments);
+
       if (comments) {
+        console.log("Comments", comments);
         this.comments = new CommentCollection(comments);
         this.unset("comments"); // TODO: why is this necessary?
+      }
+      else {
+        console.log("Leaf node", this.get("content"));
       }
     }
   });
@@ -30,24 +41,48 @@
   });
 
   var commentTree = [{
-    text: 'Level A',
+    content: 'Level A',
     comments: [
-      { text: 'Level A.1'},
-      { text: 'Level A.2'},
-      { text: 'Level A.3'}
+      { content: 'Level A.1'},
+      { content: 'Level A.2'},
+      { content: 'Level A.3'}
     ]    
   }, {
-    text: 'Level B',
+    content: 'Level B',
     comments: [
-      { text: 'Level B.1'},
-      { text: 'Level B.2'},
-      { text: 'Level B.3'}
+      { content: 'Level B.1'},
+      { content: 'Level B.2'},
+      { content: 'Level B.3'}
     ]
   }];
 
   var comments = new CommentCollection(commentTree);
-
   console.log(comments);
+
+
+  var CommentView = Marionette.CompositeView.extend({
+    template: '#comment-template',
+
+    tagName: 'ul',
+
+    initialize: function() {
+      console.log("CommentView", this);
+      // this.collection = this.model.comments;
+    }
+
+   // , attachHtml: function(collectionView, childView, index) {
+   //   collectionView._insertAfter(childView); 
+   //  }
+  });
+
+  var commentViews = new CommentView({
+    el: '#content',
+    collection: comments
+  });
+
+  commentViews.render();
+
+  // $('#content').append(comments.$el);
 
 
 </script>
