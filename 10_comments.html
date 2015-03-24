@@ -15,7 +15,11 @@
 
     <script id="comment-template" type="text/template">
         <%= content %>
-        <ul></ul>
+    </script>
+
+    <script id="article-template" type="text/template">
+      <h1> Super Article </h1>
+      <div id="article-content"></div>
     </script>
 
 <script>
@@ -65,7 +69,7 @@
     tagName: 'ul',
 
     initialize: function() {
-      alert("CommentView init()");
+      // alert("CommentView init()");
       this.collection = this.model.comments;
     }
    // , attachHtml: function(collectionView, childView, index) {
@@ -81,17 +85,18 @@
   // commentViews.render();
   // $('#content').append(comments.$el);
 
-  var ArticleView = Marionette.CollectionView.extend({
+  var ArticleView = Marionette.CompositeView.extend({
+    template: '#article-template',
     childView: CommentView
   });
 
   var article = new ArticleView({
     el: '#content',
+    childViewContainer: '#article-content',
     collection: comments
   });
 
   article.render();
-
 
 
 </script>
