@@ -22,7 +22,7 @@
     </script>
 
     <script id="article-template" type="text/template">
-      <h1> Super Article </h1>
+      <h1><%= title %></h1>
       <div id="article-content"></div>
     </script>
 
@@ -120,7 +120,10 @@
   var article = new ArticleView({
     el: '#content',
     childViewContainer: '#article-content',
-    collection: comments
+    collection: comments,
+    model: new Backbone.Model({
+      title: "Hello world"
+    })
   });
 
   article.render();
