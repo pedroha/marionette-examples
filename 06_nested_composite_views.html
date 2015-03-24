@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Composite Views</title>
+</head>
+<body>
+
+<script id="row-template" type="text/html">
+  <td><%= someData %></td>
+  <td><%= moreData %></td>
+  <td><%= stuff %></td>
+</script>
+
+<script id="table-template" type="text/html">
+  <table>
+    <thead>
+      <tr>
+        <th><%= headerOne %></th>
+        <th><%= headerTwo %></th>
+        <th><%= headerThree %></th>
+      </tr>
+    </thead>
+
+    <!-- want to insert collection children, here -->
+    <tbody></tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="3">some footer information</td>
+      </tr>
+    </tfoot>
+  </table>
+</script>
+
+<script id="super-table-template" type="text/html">
+   <ul>
+   </ul>
+</script>
+
+
+    My Content
+    <div id="content"></div>
+
+    <script src="backbone.marionette/underscore.js"></script>
+    <script src="backbone.marionette/jquery.js"></script>
+    <script src="backbone.marionette/backbone.js"></script>
+    <script src="backbone.marionette/backbone.marionette.js"></script>
+
+    <script>
+
+        var RowView = Marionette.ItemView.extend({
+          tagName: "tr",
+          template: "#row-template"
+        });
+
+        var TableView = Marionette.CompositeView.extend({
+          childView: RowView,
+
+          // specify a jQuery selector to put the `childView` instances into
+          childViewContainer: "tbody",
+
+          template: "#table-template",
+
+          attachElContent: function(html) { // appendable, vs reset whole content!
+            this.$el.append(html);
+            return this;
+          }
+        });
+
+        var Stuff = Backbone.Model.extend({
+          defaults: {
+            someData: 'Some Data',
+            moreData: 'More Data',
+            stuff: 'More stuff'
+          }
+        });
+
+        var StuffList = Backbone.Collection.extend({
+          model: Stuff
+        });
+
+        var data1 = [{
+          someData: 'Some 1',
+          moreData: 'More 1',
+          stuff: 'Stuff 1'
+        }, {
+          someData: 'Some 2',
+          moreData: 'More 2',
+          stuff: 'Stuff 2'
+        }, {
+          someData: 'Some 3',
+          moreData: 'More 3',
+          stuff: 'Stuff 3'
+        }];
+
+        var data2 = [{
+          someData: 'B. Some 1',
+          moreData: 'B. More 1',
+          stuff: 'B. Stuff 1'
+        }, {
+          someData: 'B. Some 2',
+          moreData: 'B. More 2',
+          stuff: 'B. Stuff 2'
+        }, {
+          someData: 'B. Some 3',
+          moreData: 'B. More 3',
+          stuff: 'B. Stuff 3'
+        }];
+
+        var header1 = new Backbone.Model({
+          headerOne: "One",
+          headerTwo: "Two",
+          headerThree: "Three"
+        });
+
+        var header2 = new Backbone.Model({
+          headerOne: "B. One",
+          headerTwo: "B. Two",
+          headerThree: "B. Three"
+        });
+
+
+        var stuff = new StuffList(data1);
+
+        var table1 = new TableView({
+          model: header1,
+          collection: stuff,
+          el: '#content'
+        });
+
+        table1.render();
+
+        var stuff = new StuffList(data2);
+
+        var table2 = new TableView({
+          model: header2,
+          collection: stuff,
+          el: '#content'
+        });
+
+       table2.render();
+
+       
+
+
+        // http://stackoverflow.com/questions/13575101/how-to-handle-nested-compositeview-using-backbone-marionette
+
+        // var SuperTableView = Marionette.CompositeView.extend({
+        //   template: '#super-table-template',
+        //   childView: TableView
+        //   initialize: function() {
+
+        //     this.collection = new StuffList();
+        //   },
+        //   appendHtml: function(collectionView, itemView) {
+        //     collectionView.$el.append(itemView.el);
+        //   }
+        // });
+
+        // var superTableView = new SuperTableView();
+
+        // superTableView.render();
+
+    </script>
+
+</body>
+</html>
