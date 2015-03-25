@@ -101,18 +101,22 @@
     },
 
     addComment: function() {
-      if (this.collection) {
-        alert("Adding new comment");
 
-        var comment = new Comment({
-          content: 'New Content ' + newCommentCount
-        });
-        this.collection.add(comment);
-        newCommentCount++;
+      if (!this.collection) {
+        alert("Adding a new tree!"); // How to add a new subtree 1?
+        this.collection = new CommentCollection();
       }
-      else {
-        alert("This is a child node, we can't really add nodes!")
+      else{
+        alert("Adding new comment");
       }
+
+      var comment = new Comment({
+        content: 'New Content ' + newCommentCount,
+        comments: []
+      });
+      this.collection.add(comment);
+      newCommentCount++;
+
       return false;
     },
 
