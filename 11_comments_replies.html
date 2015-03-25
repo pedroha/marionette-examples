@@ -85,6 +85,8 @@
   var comments = new CommentCollection(commentTree);
   // console.log(comments);
 
+  var newCommentCount = 0;
+
   var CommentView = Marionette.CompositeView.extend({
     template: '#comment-template',
 
@@ -94,13 +96,23 @@
     },
 
     events: {
-      'click @ui.add-child': 'addComment',
+      'click @ui.add': 'addComment',
       'click @ui.remove': 'removeComment',
     },
 
     addComment: function() {
+      if (this.collection) {
+        alert("Adding new comment");
 
-      // alert("add comment");
+        var comment = new Comment({
+          content: 'New Content ' + newCommentCount
+        });
+        this.collection.add(comment);
+        newCommentCount++;
+      }
+      else {
+        alert("This is a child node, we can't really add nodes!")
+      }
       return false;
     },
 
@@ -117,7 +129,7 @@
         return 'li';
       }
       else {
-        return 'dif';
+        return 'ul';
       }
     },
 
