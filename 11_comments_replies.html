@@ -5,7 +5,8 @@
 </head>
 <body>
 
-    My Content
+    My Feed
+
     <div id="content"></div>
 
     <script src="backbone.marionette/underscore.js"></script>
@@ -56,27 +57,27 @@
   var commentTree = [{
     content: 'Level A',
     comments: [
-      { content: 'Level A.1'},
-      { content: 'Level A.2'},
-      { content: 'Level A.3'}
+      { content: 'Level A.1', comments: []},
+      { content: 'Level A.2', comments: []},
+      { content: 'Level A.3', comments: []}
     ]    
   }, {
     content: 'Level B',
     comments: [
-      { content: 'Level B.1'},
-      { content: 'Level B.2'},
-      { content: 'Level B.3'}
+      { content: 'Level B.1', comments: []},
+      { content: 'Level B.1', comments: []},
+      { content: 'Level B.1', comments: []}
     ]
   }, {
     content: 'Level C',
     comments: [
-      { content: 'Level C.1'},
-      { content: 'Level C.2'},
-      { content: 'Level C.3',
+      { content: 'Level C.1', comments: []},
+      { content: 'Level C.1', comments: []},
+      { content: 'Level C.1',
         comments: [
-          {content: 'Level C.3 A'},
-          {content: 'Level C.3 B'},
-          {content: 'Level C.3 C'}
+          {content: 'Level D.3 A', comments: []},
+          {content: 'Level D.3 B', comments: []},
+          {content: 'Level D.3 C', comments: []}
         ]
       }
     ]
@@ -102,21 +103,22 @@
 
     addComment: function() {
 
-      if (!this.collection) {
-        alert("Adding a new tree!"); // How to add a new subtree 1?
-        this.collection = new CommentCollection();
-      }
-      else{
-        alert("Adding new comment");
-      }
+      // if (!this.collection) {
+      //   alert("Adding a new tree!"); // How to add a new subtree 1?
+      //   this.collection = new CommentCollection();
+      // }
+      // else{
+      //   alert("Adding new comment");
+      // }
 
-      var comment = new Comment({
-        content: 'New Content ' + newCommentCount,
-        comments: []
-      });
-      this.collection.add(comment);
-      newCommentCount++;
-
+      if (this.collection) {
+        var comment = new Comment({
+          content: 'New Content ' + newCommentCount,
+          comments: []
+        });
+        this.collection.add(comment);
+        newCommentCount++;        
+      }
       return false;
     },
 
