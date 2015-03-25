@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Composite Views</title>
+</head>
+<body>
+
+    My Content
+    <div id="content"></div>
+
+    <script src="backbone.marionette/underscore.js"></script>
+    <script src="backbone.marionette/jquery.js"></script>
+    <script src="backbone.marionette/backbone.js"></script>
+    <script src="backbone.marionette/backbone.marionette.js"></script>
+
+    <script id="comment-template" type="text/template">
+        <%= content %>
+    </script>
+
+    <script id="comment-leaf-template" type="text/template">
+        Leaf: <%= content %>
+    </script>
+
+    <script id="article-template" type="text/template">
+      <h1><%= title %></h1>
+      <div id="article-content"></div>
+    </script>
+
+<script>
+
+// Lots of tips from an old, obsolete example:
+// http://stackoverflow.com/questions/13575101/how-to-handle-nested-compositeview-using-backbone-marionette
+
+  var Comment = Backbone.Model.extend({
+    initialize: function() {
+      var comments = this.get("comments");
+      // alert('Comments ' + comments);
+
+      if (comments) {
+        console.log("Comments", comments);
+        this.comments = new CommentCollection(comments);
+        this.unset("comments"); // TODO: why is this necessary?
+      }
+      else {
+        console.log("Leaf node", this.get("content"));
+      }
+    }
+  });
+
+  var CommentCollection = Backbone.Collection.extend({
+    model: Comment
+  });
+
+  var commentTree = [{
+    content: 'Level A',
+    comments: [
+      { content: 'Level A.1'},
+      { content: 'Level A.2'},
+      { content: 'Level A.3'}
+    ]    
+  }, {
+    content: 'Level B',
+    comments: [
+      { content: 'Level B.1'},
+      { content: 'Level B.2'},
+      { content: 'Level B.3'}
+    ]
+  }, {
+    content: 'Level C',
+    comments: [
+      { content: 'Level C.1'},
+      { content: 'Level C.2'},
+      { content: 'Level C.3',
+        comments: [
+          {content: 'Level C.3 A'},
+          {content: 'Level C.3 B'},
+          {content: 'Level C.3 C'}
+        ]
+      }
+    ]
+  }];
+
+  var comments = new CommentCollection(commentTree);
+  // console.log(comments);
+
+  var CommentView = Marionette.CompositeView.extend({
+    template: '#comment-template',
+
+    tagName: function() {
+      if (this.model.comments) {
+        return 'ul';
+      }
+      else {
+        return 'li';
+      }
+    },
+
+    initialize: function() {
+      // alert("CommentView init()");
+      this.collection = this.model.comments;
+      // if (!this.collection) {
+      //   alert("leaf");
+      // }
+    }
+   // , attachHtml: function(collectionView, childView, index) {
+   //   collectionView._insertAfter(childView); 
+   //  }
+  });
+
+  // var commentViews = new CommentView({
+  //   el: '#content',
+  //   collection: comments
+  // });
+
+  // commentViews.render();
+  // $('#content').append(comments.$el);
+
+  var ArticleView = Marionette.CompositeView.extend({
+    template: '#article-template',
+    childView: CommentView
+  });
+
+  var article = new ArticleView({
+    el: '#content',
+    childViewContainer: '#article-content',
+    collection: comments,
+    model: new Backbone.Model({
+      title: "Hello world"
+    })
+  });
+
+  article.render();
+
+
+</script>
+
+</body>
+</html>
